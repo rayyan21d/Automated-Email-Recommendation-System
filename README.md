@@ -19,6 +19,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to use the
 You can also edit the page by modifying `app/page.js`.
 
 ## What does it do?
-[PaperLink] a web app that sends weekly email recommendation of research papers to users based on their interests.
+PaperLink a web app that sends weekly email recommendation of research papers to users based on their interests.
 
 More info...
