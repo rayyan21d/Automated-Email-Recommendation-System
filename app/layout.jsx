@@ -4,7 +4,7 @@ import Nav from "@components/Nav";
 import Provider from "@components/Provider";
 
 export const metadata = {
-  title: "paperlink",
+  title: "Paperlink",
   description: "allow researchers to get weekly updates based on their interests",
 };
 

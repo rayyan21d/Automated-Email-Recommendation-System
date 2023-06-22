@@ -1,7 +1,5 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import GitHubProvider from "next-auth/providers/github";
-import AppleProvider from "next-auth/providers/apple";
 
 
 import User from '@models/user';
@@ -11,22 +9,10 @@ import { connectToDB } from '@utils/database';
 const handler = NextAuth({
   providers: [
 
-    GitHubProvider({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET
-    }),
-
-    // ...add more providers here  
-    AppleProvider({
-      clientId: process.env.APPLE_ID,
-      clientSecret: process.env.APPLE_SECRET
-    }),
-
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     })
-
 
   ],
   callbacks: {
