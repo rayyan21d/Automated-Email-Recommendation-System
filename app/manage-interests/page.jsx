@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-import Form from "@components/Form";
+import InterestsForm from "@components/InterestsForm";
 
 const CreatePrompt = () => {
   const router = useRouter();
@@ -38,13 +38,21 @@ const CreatePrompt = () => {
   };
 
   return (
-    <Form
+    <>
+    <InterestsForm
       type='Create'
       post={post}
       setPost={setPost}
       submitting={submitting}
       handleSubmit={createPrompt}
     />
+
+    <h2>This is element</h2>
+
+  
+    </>
+
+
   );
 };
 
