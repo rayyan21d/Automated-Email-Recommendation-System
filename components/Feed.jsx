@@ -4,20 +4,6 @@ import { useState, useEffect } from "react";
 
 import PromptCard from "./PromptCard";
 
-// Import data here and pass it down to the prompt card!
-const springerEndpoint = "http://api.springernature.com/"
-
-
-const methods = {
-  single:"doi", 
-  set:"issn", 
-  setOfChapters:"isbn"
-}
-const doi = "10.1007/s11276-008-0131-4"
-const finalndpoint = springerEndpoint + "metadata/json/?q="+ methods.single + ":" + doi + "&api_key=" + process.env.SPRINGER_API_KEY;
-
-const finallendpoint = "https://api.springernature.com/metadata/json?q=doi:10.1007/s11276-008-0131-4&api_key=3deafdb219d7c8edf158686ab48668e9#"
-
 
 const PromptCardList = ({ data, handleTagClick }) => {
 
@@ -43,17 +29,11 @@ const Feed = () => {
   const [searchedResults, setSearchedResults] = useState([]);
 
   const fetchPosts = async () => {
-    const response = await fetch("/api/prompt");
-    const data = await response.json();
-    
-    const fetchSpringer = async () => {
-      const response = await fetch(finallendpoint);
-      const data = await response.json();
-      console.log(data);  
-    };
+    //const response = await fetch("/api/prompt");
+    //const data = await response.json();
 
-    fetchSpringer();
-    setAllPosts(data);
+    //setAllPosts(data);
+    
   };
 
   useEffect(() => {
