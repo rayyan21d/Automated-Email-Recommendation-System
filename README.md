@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+[How to run it locally?](https://youtu.be/C0oZgcSxjEo)
+
 After you download the project, make sure you have installed the latest version of NodeJs. Then simply open the terminal inside the project directory and run :
 `npm install` to install all the dependencies required to run the app.
 
