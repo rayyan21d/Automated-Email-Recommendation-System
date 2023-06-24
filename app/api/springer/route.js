@@ -16,14 +16,24 @@ const finalndpoint = springerEndpoint + "metadata/json/?q=" + methods.single + "
 
 const finallendpoint = "https://api.springernature.com/metadata/json?q=doi:10.1007/s11276-008-0131-4&api_key=3deafdb219d7c8edf158686ab48668e9#"
 
+//This fetches data from springer
+const fetchSpringer = async () => {
+    const response = await fetch(finallendpoint);
+    const data = await response.json();
+    return data;
+};
 
+//This converts springer data into a post-able format
+const processSpringer = async (data) => {
+
+    return processedData;
+};
 
 
 export const GET = async (request) => {
     try {
-        await connectToDB()
-
-        const prompts = await Prompt.find({}).populate('creator')
+        //await connectToDB()
+        //const prompts = await Prompt.find({}).populate('creator')
 
         const raw = fetchSpringer();
         const processed = processSpringer(raw);
@@ -39,18 +49,6 @@ export const GET = async (request) => {
     }
 } 
 
-//This fetches data from springer
-const fetchSpringer = async () => {
-    const response = await fetch(finallendpoint);
-    const data = await response.json();
-    return data;
-};  
-
-//This converts springer data into a post-able format
-const processSpringer = async (data) => {
-
-    return processedData;
-};
 
 
 

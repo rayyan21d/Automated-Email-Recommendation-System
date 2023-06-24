@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 
 import PromptCard from "./PromptCard";
+import { set } from "mongoose";
 
 
 const PromptCardList = ({ data, handleTagClick }) => {
@@ -29,10 +30,14 @@ const Feed = () => {
   const [searchedResults, setSearchedResults] = useState([]);
 
   const fetchPosts = async () => {
-    //const response = await fetch("/api/prompt");
-    //const data = await response.json();
+    const response = await fetch("/api/prompt");
+    const data = await response.json();
 
-    //setAllPosts(data);
+    // const springerData = await fetch("api/springer");
+    // const springerJson = await springerData.json();
+    // setAllPosts(springerJson);
+
+    setAllPosts(data);
     
   };
 
