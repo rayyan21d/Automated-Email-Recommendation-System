@@ -46,7 +46,6 @@ const Feed = () => {
     const response = await fetch("/api/prompt");
     const data = await response.json();
     
-
     const fetchSpringer = async () => {
       const response = await fetch(finallendpoint);
       const data = await response.json();
